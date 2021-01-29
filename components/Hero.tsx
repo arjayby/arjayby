@@ -41,16 +41,13 @@ const Hero: React.FC = () => {
             Say Hello
           </Button>
         </Box>
-
         <Divider orientation="vertical" />
-
         <Box
           as="section"
           mt={{ base: 8, lg: 0 }}
           ml={{ lg: 10 }}
           display="flex"
-          flexWrap="wrap"
-          alignItems="flex-end"
+          flexDirection="column"
           fontSize="2xl"
           fontWeight={400}
         >
@@ -58,18 +55,20 @@ const Hero: React.FC = () => {
             I'm a full stack web developer based in Iloilo, PH. Working with
             various start-up companies for over 2 years.
           </Text>
-          Experienced in&nbsp;
-          <Text fontSize="1.5rem" fontWeight={700}>
-            React JS
-          </Text>
-          ,&nbsp;
-          <Text fontSize="1.5rem" fontWeight={700}>
-            Node JS
-          </Text>
-          &nbsp;and&nbsp;
-          <Text fontSize="1.5rem" fontWeight={700}>
-            Phoenix Elixir.
-          </Text>
+          <Box display="flex" flexWrap="wrap">
+            <Text>Experienced in&nbsp;</Text>
+            <Text fontSize="1.5rem" fontWeight={700}>
+              React JS
+            </Text>
+            <Text>,&nbsp;</Text>
+            <Text fontSize="1.5rem" fontWeight={700}>
+              Node JS&nbsp;
+            </Text>
+            <Text>and&nbsp;</Text>
+            <Text fontSize="1.5rem" fontWeight={700}>
+              Phoenix Elixir.
+            </Text>
+          </Box>
         </Box>
       </Grid>
     </Center>
