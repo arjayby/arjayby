@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
   const navTextColor = useColorModeValue("gray.600", "gray.400");
 
   return (
-    <Center as="article" minH="75vh">
+    <Center as="article" minH="75vh" my={{ base: 8, sm: 0 }}>
       <Grid templateColumns={{ lg: "auto auto 1fr", xl: "auto 1fr auto" }}>
         <Box as="section" mr={{ lg: 8 }}>
           <Heading as="h1" size="lg" mb={5}>
