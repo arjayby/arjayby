@@ -50,7 +50,7 @@ const Project: React.FC<ProjectProps> = ({
       boxShadow="0 4px 17px rgb(0 0 0 / 18%)"
     >
       <Flex h="100%" wrap={{ base: "wrap", md: "nowrap" }}>
-        <Box p={{ base: 8, md: 14 }} flex={1}>
+        <Box maxW={380} p={{ base: 8, md: 14 }} flex={1}>
           <Flex h="100%" direction="column" justify="space-between">
             <Box>
               <Text>{year}</Text>
@@ -107,7 +107,7 @@ const Project: React.FC<ProjectProps> = ({
           }}
           filter="grayscale(75%)"
         >
-          <Image alt={title} src={screenshots[0]} />
+          <Image alt={title} src={screenshots[0]} ignoreFallback />
         </Box>
       </Flex>
     </Box>
