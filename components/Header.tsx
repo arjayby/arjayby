@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import Image from "next/image";
 import {
   Box,
   Button,
@@ -12,6 +11,7 @@ import {
   Grid,
   Icon,
   IconButton,
+  Image,
   useColorMode,
   useColorModeValue,
   useDisclosure,
@@ -46,8 +46,9 @@ const Header: React.FC<HeaderProps> = ({
               ? "/images/logo-monochrome-white.svg"
               : "/images/logo-monochrome-black.svg"
           }
-          height="100%"
+          height={60}
           width={150}
+          ignoreFallback
         />
       </Box>
       <Flex as="nav" display={{ base: "none", lg: "flex" }} align="center">
