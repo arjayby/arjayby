@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import Image from "next/image";
 import {
   Box,
   Button,
@@ -9,7 +10,6 @@ import {
   DrawerOverlay,
   Flex,
   Grid,
-  Heading,
   Icon,
   IconButton,
   useColorMode,
@@ -38,10 +38,17 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <Flex as="header" h="15vh" justify="space-between" align="center">
-      <Box cursor="pointer">
-        <Heading as="h6" size="lg">
-          ARJAYBY
-        </Heading>
+      <Box as="a" href="/" cursor="pointer">
+        <Image
+          alt="arjayby"
+          src={
+            isDarkMode
+              ? "/images/logo-monochrome-white.svg"
+              : "/images/logo-monochrome-black.svg"
+          }
+          height="100%"
+          width={150}
+        />
       </Box>
       <Flex as="nav" display={{ base: "none", lg: "flex" }} align="center">
         <Grid templateColumns="1fr 1fr auto" gap={5}>
