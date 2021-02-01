@@ -14,7 +14,14 @@ const Hero: React.FC = () => {
   const navTextColor = useColorModeValue("gray.600", "gray.400");
 
   return (
-    <Center as="article" minH="75vh" my={{ base: 8, sm: 0 }}>
+    <Center
+      as="article"
+      minH={{
+        base: "calc(100vh - (200px + 1rem))",
+        sm: "calc(100vh - (280px + 1rem))",
+      }}
+      mb="calc(140px + 1rem)"
+    >
       <Grid templateColumns={{ lg: "auto auto 1fr", xl: "auto 1fr auto" }}>
         <Box as="section" mr={{ lg: 8 }}>
           <Heading as="h1" size="lg" mb={5}>
@@ -28,7 +35,7 @@ const Hero: React.FC = () => {
             size="xl"
             color={navTextColor}
             fontWeight={600}
-            mb={10}
+            mb={{ base: 5, md: 10 }}
           >
             a web developer.
           </Heading>
@@ -44,7 +51,7 @@ const Hero: React.FC = () => {
         <Divider orientation="vertical" />
         <Box
           as="section"
-          mt={{ base: 8, lg: 0 }}
+          mt={{ base: 10, lg: 0 }}
           ml={{ lg: 10 }}
           display="flex"
           flexDirection="column"

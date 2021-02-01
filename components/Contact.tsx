@@ -3,7 +3,13 @@ import { Box, Button, Center, Heading, Text } from "@chakra-ui/react";
 
 const Contact = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <Center as="section" ref={ref} minH="75vh" justifyContent="flex-start">
+    <Center
+      as="section"
+      ref={ref}
+      mt="116px"
+      minH={{ base: "calc(100vh - 232px)" }}
+      justifyContent="flex-start"
+    >
       <Box>
         <Heading size="3xl" mb="3rem">
           Contact

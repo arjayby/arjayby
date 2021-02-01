@@ -5,7 +5,7 @@ import { projects } from "../utils/projects";
 
 const Projects = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <Box as="section" ref={ref}>
+    <Box as="section" minH="100vh" ref={ref}>
       <Heading size="3xl" mb="3rem">
         Projects
       </Heading>

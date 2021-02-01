@@ -37,7 +37,13 @@ const Header: React.FC<HeaderProps> = ({
   const isDarkMode = colorMode === "dark";
 
   return (
-    <Flex as="header" h="15vh" justify="space-between" align="center">
+    <Flex
+      as="header"
+      h={{ base: "100px", sm: "140px" }}
+      mb={4}
+      justify="space-between"
+      align="center"
+    >
       <Box as="a" href="/" cursor="pointer">
         <Image
           alt="arjayby"
@@ -46,8 +52,8 @@ const Header: React.FC<HeaderProps> = ({
               ? "/images/logo-monochrome-white.svg"
               : "/images/logo-monochrome-black.svg"
           }
-          height={60}
-          width={150}
+          height="60px"
+          width="150px"
           ignoreFallback
         />
       </Box>

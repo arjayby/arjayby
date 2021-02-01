@@ -25,9 +25,7 @@ const Home: React.FC = () => {
       <Center>
         <Box maxW={1200}>
           <Hero />
-          <Box h="10vh" />
           <Projects ref={projectsRef} />
-          <Box h="10vh" />
           <Contact ref={contactRef} />
         </Box>
       </Center>

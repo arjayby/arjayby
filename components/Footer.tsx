@@ -15,15 +15,16 @@ const Footer: React.FC = () => {
   return (
     <Box
       as="footer"
-      h="15vh"
-      pb={{ base: 4, sm: 0 }}
+      py={{ base: 5, sm: 10 }}
       display="flex"
       justifyContent={{ base: "center", sm: "space-between" }}
       alignItems="center"
       flexWrap="wrap"
     >
-      <Text color={footerTextColor}>Arjay Bayona @ arjayby.com</Text>
-      <Box>
+      <Text py={2} color={footerTextColor}>
+        Arjay Bayona @ arjayby.com
+      </Text>
+      <Box py={2}>
         <IconButton
           as="a"
           href={links.linkedIn}

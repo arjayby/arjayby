@@ -19,7 +19,6 @@ const Layout: React.FC<LayoutProps & HeaderProps> = ({
 }) => {
   return (
     <Box
-      minW={280}
       h="100vh"
       px={{ base: "2rem", lg: "4rem" }}
       display="grid"
