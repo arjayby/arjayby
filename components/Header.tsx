@@ -8,7 +8,6 @@ import {
   DrawerContent,
   DrawerOverlay,
   Flex,
-  Grid,
   Icon,
   IconButton,
   Image,
@@ -18,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { IoMdMoon, IoMdSunny, IoMdMenu } from "react-icons/io";
 import Navigations from "./Navigations";
+import AnimateEaseInView from "./AnimateEaseInView";
 
 export interface HeaderProps {
   onScrollIntoProjectsView?: () => void;
@@ -45,32 +45,34 @@ const Header: React.FC<HeaderProps> = ({
       align="center"
     >
       <Box as="a" href="/" cursor="pointer">
-        <Image
-          alt="arjayby"
-          src={
-            isDarkMode
-              ? "/images/logo-monochrome-white.svg"
-              : "/images/logo-monochrome-black.svg"
-          }
-          height="60px"
-          width="150px"
-          ignoreFallback
-        />
+        <AnimateEaseInView duration={0.3}>
+          <Image
+            alt="arjayby"
+            src={
+              isDarkMode
+                ? "/images/logo-monochrome-white.svg"
+                : "/images/logo-monochrome-black.svg"
+            }
+            height="60px"
+            width="150px"
+            ignoreFallback
+          />
+        </AnimateEaseInView>
       </Box>
       <Flex as="nav" display={{ base: "none", lg: "flex" }} align="center">
-        <Grid templateColumns="1fr 1fr auto" gap={5}>
-          <Navigations
-            onScrollIntoProjectsView={onScrollIntoProjectsView}
-            onScrollIntoContactView={onScrollIntoContactView}
-          />
-        </Grid>
-        <IconButton
-          ml={20}
-          aria-label="Toggle theme"
-          variant="ghost"
-          onClick={toggleColorMode}
-          icon={isDarkMode ? <Icon as={IoMdSunny} /> : <Icon as={IoMdMoon} />}
+        <Navigations
+          onScrollIntoProjectsView={onScrollIntoProjectsView}
+          onScrollIntoContactView={onScrollIntoContactView}
         />
+        <AnimateEaseInView duration={0.3} y={-60}>
+          <IconButton
+            ml={20}
+            aria-label="Toggle theme"
+            variant="ghost"
+            onClick={toggleColorMode}
+            icon={isDarkMode ? <Icon as={IoMdSunny} /> : <Icon as={IoMdMoon} />}
+          />
+        </AnimateEaseInView>
       </Flex>
       <Box as="nav" display={{ base: "unset", lg: "none" }}>
         <IconButton

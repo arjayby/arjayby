@@ -10,8 +10,8 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
         Projects
       </Heading>
       <SimpleGrid spacing={8}>
-        {projects.map((project) => (
-          <Project key={project.id} project={project} />
+        {projects.map((project, index) => (
+          <Project key={project.id} index={index} project={project} />
         ))}
       </SimpleGrid>
     </Box>

@@ -9,6 +9,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import AnimateEaseInView from "./AnimateEaseInView";
 
 const Hero: React.FC = () => {
   const navTextColor = useColorModeValue("gray.600", "gray.400");
@@ -24,29 +25,31 @@ const Hero: React.FC = () => {
     >
       <Grid templateColumns={{ lg: "auto auto 1fr", xl: "auto 1fr auto" }}>
         <Box as="section" mr={{ lg: 8 }}>
-          <Heading as="h1" size="lg" mb={5}>
-            Hi, 👋!
-          </Heading>
-          <Heading as="h1" size="3xl" mb={3}>
-            I'm Arjay Bayona,
-          </Heading>
-          <Heading
-            as="h1"
-            size="xl"
-            color={navTextColor}
-            fontWeight={600}
-            mb={{ base: 5, md: 10 }}
-          >
-            a software engineer.
-          </Heading>
-          <Button
-            as="a"
-            href="mailto:arjayby1@gmail.com"
-            colorScheme="yellow"
-            size="lg"
-          >
-            Say Hello
-          </Button>
+          <AnimateEaseInView y={60} duration={0.6}>
+            <Heading as="h1" size="lg" mb={5}>
+              Hi, 👋!
+            </Heading>
+            <Heading as="h1" size="3xl" mb={3}>
+              I'm Arjay Bayona,
+            </Heading>
+            <Heading
+              as="h1"
+              size="xl"
+              color={navTextColor}
+              fontWeight={600}
+              mb={{ base: 5, md: 10 }}
+            >
+              a software engineer.
+            </Heading>
+            <Button
+              as="a"
+              href="mailto:arjayby1@gmail.com"
+              colorScheme="yellow"
+              size="lg"
+            >
+              Say Hello
+            </Button>
+          </AnimateEaseInView>
         </Box>
         <Divider orientation="vertical" />
         <Box
@@ -58,25 +61,27 @@ const Hero: React.FC = () => {
           fontSize="2xl"
           fontWeight={400}
         >
-          <Text mb={5}>
-            Specialized in building astounding websites and applications. I have
-            both worked from startup clients to medium enterprise with{" "}
-            {new Date(Date.now()).getFullYear() - 2018}+ years of experience.
-          </Text>
-          <Box display="flex" flexWrap="wrap">
-            <Text>Experienced in&nbsp;</Text>
-            <Text fontSize="1.5rem" fontWeight={700}>
-              React
+          <AnimateEaseInView y={-60} duration={0.6}>
+            <Text mb={5}>
+              Specialized in building astounding websites and applications. I
+              have both worked from startup clients to medium enterprise with{" "}
+              {new Date(Date.now()).getFullYear() - 2018}+ years of experience.
             </Text>
-            <Text>,&nbsp;</Text>
-            <Text fontSize="1.5rem" fontWeight={700}>
-              Node.js&nbsp;
-            </Text>
-            <Text>and&nbsp;</Text>
-            <Text fontSize="1.5rem" fontWeight={700}>
-              Phoenix Elixir.
-            </Text>
-          </Box>
+            <Box display="flex" flexWrap="wrap">
+              <Text>Experienced in&nbsp;</Text>
+              <Text fontSize="1.5rem" fontWeight={700}>
+                React
+              </Text>
+              <Text>,&nbsp;</Text>
+              <Text fontSize="1.5rem" fontWeight={700}>
+                Node.js&nbsp;
+              </Text>
+              <Text>and&nbsp;</Text>
+              <Text fontSize="1.5rem" fontWeight={700}>
+                Phoenix Elixir.
+              </Text>
+            </Box>
+          </AnimateEaseInView>
         </Box>
       </Grid>
     </Center>
