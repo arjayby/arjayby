@@ -8,6 +8,7 @@ import {
   DrawerContent,
   DrawerOverlay,
   Flex,
+  Grid,
   Icon,
   IconButton,
   Image,
@@ -60,11 +61,15 @@ const Header: React.FC<HeaderProps> = ({
         </AnimateEaseInView>
       </Box>
       <Flex as="nav" display={{ base: "none", lg: "flex" }} align="center">
-        <Navigations
-          onScrollIntoProjectsView={onScrollIntoProjectsView}
-          onScrollIntoContactView={onScrollIntoContactView}
-        />
-        <AnimateEaseInView duration={0.3} y={-60}>
+        <AnimateEaseInView duration={0.3} x={30}>
+          <Grid templateColumns="1fr 1fr auto" gap={5}>
+            <Navigations
+              onScrollIntoProjectsView={onScrollIntoProjectsView}
+              onScrollIntoContactView={onScrollIntoContactView}
+            />
+          </Grid>
+        </AnimateEaseInView>
+        <AnimateEaseInView duration={0.3}>
           <IconButton
             ml={20}
             aria-label="Toggle theme"
@@ -75,14 +80,16 @@ const Header: React.FC<HeaderProps> = ({
         </AnimateEaseInView>
       </Flex>
       <Box as="nav" display={{ base: "unset", lg: "none" }}>
-        <IconButton
-          ref={drawerRef}
-          aria-label="Navigation menu"
-          size="lg"
-          variant="ghost"
-          icon={<Icon as={IoMdMenu} />}
-          onClick={onOpen}
-        />
+        <AnimateEaseInView duration={0.3}>
+          <IconButton
+            ref={drawerRef}
+            aria-label="Navigation menu"
+            size="lg"
+            variant="ghost"
+            icon={<Icon as={IoMdMenu} />}
+            onClick={onOpen}
+          />
+        </AnimateEaseInView>
         <Drawer
           finalFocusRef={drawerRef}
           isOpen={isOpen}
