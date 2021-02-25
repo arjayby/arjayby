@@ -60,8 +60,8 @@ const Hero: React.FC = () => {
         >
           <Text mb={5}>
             Specialized in building astounding websites and applications. I have
-            both worked from startup clients to medium enterprise with 2+ years
-            of experience.
+            both worked from startup clients to medium enterprise with{" "}
+            {new Date(Date.now()).getFullYear() - 2018}+ years of experience.
           </Text>
           <Box display="flex" flexWrap="wrap">
             <Text>Experienced in&nbsp;</Text>
