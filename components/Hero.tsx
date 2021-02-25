@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
             fontWeight={600}
             mb={{ base: 5, md: 10 }}
           >
-            a web developer.
+            a software engineer.
           </Heading>
           <Button
             as="a"
@@ -59,17 +59,18 @@ const Hero: React.FC = () => {
           fontWeight={400}
         >
           <Text mb={5}>
-            I'm a full stack web developer based in Iloilo, PH. Working with
-            various start-up companies for over 2 years.
+            Specialized in building astounding websites and applications. I have
+            both worked from startup clients to medium enterprise with 2+ years
+            of experience.
           </Text>
           <Box display="flex" flexWrap="wrap">
             <Text>Experienced in&nbsp;</Text>
             <Text fontSize="1.5rem" fontWeight={700}>
-              React JS
+              React
             </Text>
             <Text>,&nbsp;</Text>
             <Text fontSize="1.5rem" fontWeight={700}>
-              Node JS&nbsp;
+              Node.js&nbsp;
             </Text>
             <Text>and&nbsp;</Text>
             <Text fontSize="1.5rem" fontWeight={700}>
