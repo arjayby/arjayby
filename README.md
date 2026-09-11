@@ -6,8 +6,8 @@ I build design tools and AI products and worked on software businesses. I ship f
 
 - [Kousa](https://www.kousa.app). a node-based studio for generating and connecting AI media.
 - [Synixir](https://github.com/arjayby/synixir). an Elixir/Phoenix collaboration backend in development, with shared state, presence, and collaborative editing planned.
-- [a1ui](https://ui.arjayby1.xyz). original React components you can copy, customize, and install through a shadcn registry or coding agent. [source](https://github.com/arjayby/a1ui)
-- [AgentKogei](https://agentkogei.vercel.app). design systems for coding agents, with a single `DESIGN.md` to guide how an app looks and behaves. [source](https://github.com/arjayby/agentkogei)
+- [a1ui](https://ui.arjayby1.xyz). a collection of React components inspired by designs I find online. Copy, customize, and install through a shadcn registry or coding agent.
+- [AgentKogei](https://agentkogei.vercel.app). design systems for coding agents, with a single `DESIGN.md` to guide how an app looks and behaves.
 
 ### stack
 
